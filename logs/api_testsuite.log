@@ -1,0 +1,40 @@
+26/10/2017 06:23:39 PM [TestCase-1] [INFO] Testcase test001_create Started at 1509027819.48
+26/10/2017 06:23:39 PM [TestCase-1] [INFO] test001_create STARTED
+26/10/2017 06:23:39 PM [TestCase-1] [INFO] #. Create post using POST /posts/, should succeed
+26/10/2017 06:23:39 PM [TestCase-1] [INFO] POST http://jsonplaceholder.typicode.com/posts
+26/10/2017 06:23:40 PM [TestCase-1] [INFO] #. Check response headers, should succeed
+26/10/2017 06:23:40 PM [TestCase-1] [INFO] #. Check response body, should succeed
+26/10/2017 06:23:40 PM [TestCase-1] [INFO] test001_create ENDED
+26/10/2017 06:23:40 PM [TestCase-1] [INFO] Testcase test001_create Execution Time is 1.20000004768 sec.
+26/10/2017 06:23:40 PM [TestCase-2] [INFO] Testcase test002_view Started at 1509027820.68
+26/10/2017 06:23:40 PM [TestCase-2] [INFO] test002_view STARTED
+26/10/2017 06:23:40 PM [TestCase-2] [INFO] #. View post using GET /posts/{id}, should succeed
+26/10/2017 06:23:40 PM [TestCase-2] [INFO] GET http://jsonplaceholder.typicode.com/posts/1
+26/10/2017 06:23:40 PM [TestCase-2] [INFO] #. Check response headers, should succeed
+26/10/2017 06:23:40 PM [TestCase-2] [INFO] #. Check response body, should succeed
+26/10/2017 06:23:40 PM [TestCase-2] [INFO] test002_view ENDED
+26/10/2017 06:23:40 PM [TestCase-2] [INFO] Testcase test002_view Execution Time is 0.27999997139 sec.
+26/10/2017 06:23:40 PM [TestCase-3] [INFO] Testcase test003_list Started at 1509027820.96
+26/10/2017 06:23:40 PM [TestCase-3] [INFO] test003_list STARTED
+26/10/2017 06:23:40 PM [TestCase-3] [INFO] #. View post using GET /posts, should succeed
+26/10/2017 06:23:40 PM [TestCase-3] [INFO] GET http://jsonplaceholder.typicode.com/posts
+26/10/2017 06:23:41 PM [TestCase-3] [INFO] #. Check response headers, should succeed
+26/10/2017 06:23:41 PM [TestCase-3] [INFO] #. Check response body, should succeed
+26/10/2017 06:23:41 PM [TestCase-3] [INFO] test003_list ENDED
+26/10/2017 06:23:41 PM [TestCase-3] [INFO] Testcase test003_list Execution Time is 0.275000095367 sec.
+26/10/2017 06:23:41 PM [TestCase-4] [INFO] Testcase test004_update Started at 1509027821.24
+26/10/2017 06:23:41 PM [TestCase-4] [INFO] test004_update STARTED
+26/10/2017 06:23:41 PM [TestCase-4] [INFO] #. Update post using PUT /posts/{id}, should succeed
+26/10/2017 06:23:41 PM [TestCase-4] [INFO] PUT http://jsonplaceholder.typicode.com/posts/1
+26/10/2017 06:23:41 PM [TestCase-4] [INFO] #. Check response headers, should succeed
+26/10/2017 06:23:41 PM [TestCase-4] [INFO] #. Check response body, should succeed
+26/10/2017 06:23:41 PM [TestCase-4] [INFO] test004_update ENDED
+26/10/2017 06:23:41 PM [TestCase-4] [INFO] Testcase test004_update Execution Time is 0.52999997139 sec.
+26/10/2017 06:23:41 PM [TestCase-5] [INFO] Testcase test005_delete Started at 1509027821.77
+26/10/2017 06:23:41 PM [TestCase-5] [INFO] test005_delete STARTED
+26/10/2017 06:23:41 PM [TestCase-5] [INFO] #. Delete post using DELETE /posts/{id}, should succeed
+26/10/2017 06:23:41 PM [TestCase-5] [INFO] DELETE http://jsonplaceholder.typicode.com/posts/1
+26/10/2017 06:23:42 PM [TestCase-5] [INFO] #. Check response headers, should succeed
+26/10/2017 06:23:42 PM [TestCase-5] [INFO] #. Check response body, should succeed
+26/10/2017 06:23:42 PM [TestCase-5] [INFO] test005_delete ENDED
+26/10/2017 06:23:42 PM [TestCase-5] [INFO] Testcase test005_delete Execution Time is 0.673000097275 sec.
