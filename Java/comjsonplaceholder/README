@@ -1,0 +1,29 @@
+# Exercise 2: REST API Test:
+* Please automate tests for the API Resource http://jsonplaceholder.typicode.com/posts
+* Operation to be covered:  Create, Update, View, Delete, List
+* For further details refer to: https://github.com/typicode/jsonplaceholder
+* Explain your framework architecture and design considerations
+
+# Framework architecture and design:
+* Using BDD with java frameworks (Maven, JUnit, REST Assured, Hamcrest)
+
+* Maven is a software project management and comprehension tool. Based on the concept of a Project Object Model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
+
+* JUnit is a unit testing framework for the Java programming language. JUnit has been important in the development of test-driven development, and is one of a family of unit testing frameworks which is collectively known as xUnit that originated with SUnit.
+
+* REST Assured is a Java DSL for simplifying testing of REST based services built on top of HTTP Builder. It supports POST, GET, PUT, DELETE, OPTIONS, PATCH and HEAD requests and can be used to validate and verify the response of these requests.
+
+Note that the fluent API used by REST Assured supports the familiar Given/When/Then syntax from behavior-driven development (BDD), resulting in a test that is easy to read and takes care of everything (setup, execution, and verification) with just a single line of code.
+
+* Hamcrest is the well-known framework used for unit testing in the Java ecosystem. It’s bundled in JUnit and simply put, it uses existing predicates – called matcher classes – for making assertions.
+
+# Files:
+* pom.xml: Maven pom file which contains the required java plugins/dependencies
+* PostsTests.java: path [comjsonplaceholder\src\test\java\Posts] the java class for the tests code.
+
+# Requirements:
+* JDK 1.8 & Maven
+
+# Commands to run the tests:
+mvn clean install
+mvn test
