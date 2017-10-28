@@ -1,8 +1,6 @@
-# Exercise 2: REST API Test:
-* Please automate tests for the API Resource http://jsonplaceholder.typicode.com/posts
-* Operation to be covered:  Create, Update, View, Delete, List
-* For further details refer to: https://github.com/typicode/jsonplaceholder
-* Explain your framework architecture and design considerations
+# Framework architecture and design:
+* Using layered architecture with configurable OOP (Python) framework which include the required test methods and utilities to run the backend tests with documented steps and simple time stamped logging mechanism.
+
 
 # Files and Folders:
 --------------------
@@ -13,9 +11,6 @@
 * testframework: The test-framework folder for base test case class and utilities.
 * testframework/base.py: The test framework base file for test case classes and utilities.
 * logs: The test-suite logging folder will be created during operations containing the log file.
-
-# Framework architecture and design:
-* Using layered architecture with configurable OOP (Python) framework which include the required test methods and utilities to run the backend tests with documented steps and simple time stamped logging mechanism.
 
 
 # Requirements:
