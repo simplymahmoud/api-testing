@@ -10,7 +10,9 @@ post = {"id": 1,
         "userId": 1, 
         "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit", 
         "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"}  
-                
+             
+
+
 class TestPosts(BaseTest):
 
    
@@ -142,4 +144,15 @@ class TestPosts(BaseTest):
         self.assertEqual(type(response.json()), types.DictType)
         self.assertEqual(response.json(), {})
         
+        self.lg('%s ENDED' % self._testID)
+        
+
+    def test006_log(self):  
+        """ TestCase-6: Test case for test delete post using DELETE /posts/{id}.*
+        **Test Scenario:**
+        #. Delete post using DELETE /posts/{id}, should succeed
+        #. Check response headers, should succeed
+        #. Check response body, should succeed
+        """          
+        self.lg('%s STARTED' % self._testID)
         self.lg('%s ENDED' % self._testID)

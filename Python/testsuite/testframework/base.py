@@ -8,6 +8,9 @@ from unittest import TestCase
 import requests
 import json
 
+
+proxy = {'http_proxy': 'http://hybrid-web.global.blackspider.com:8082/proxy.pac?p=4hh28rgh'}
+
 class BaseTest(TestCase):
 
 
@@ -24,6 +27,10 @@ class BaseTest(TestCase):
     def __init__(self, *args, **kwargs):
         super(BaseTest, self).__init__(*args, **kwargs)
         self.url = config['main']['url']
+        '''self.url_string_list = []
+        for key in config['get'].keys():
+            for inner_key in config[key].keys():
+                self.url_string_list.append(str(key) + '?' + inner_key + '=' + config[key][inner_key])'''
 
 
     def setUp(self):
@@ -47,31 +54,43 @@ class BaseTest(TestCase):
 
     def lg(self, msg):
         self._logger.info(msg)
+                
         
+    def head_request_response(self, uri, headers=None, payload=None):
+        if headers == None: 
+            headers = {'Content-Type': 'application/json; charset=utf-8',
+                       'Connection': 'keep-alive'}
+        self.lg('GET %s' % self.url + uri)
+        return self.session.head(self.url + uri, params=payload, headers=headers, timeout=30, allow_redirects=True, proxies=proxy)    
+    
         
     def get_request_response(self, uri, headers=None, payload=None):
         if headers == None: 
-            headers = {"Content-Type": "application/json"}
+            headers = {'Content-Type': 'application/json; charset=utf-8',
+                       'Connection': 'keep-alive'}
         self.lg('GET %s' % self.url + uri)
-        return self.session.get(self.url + uri, params=payload, headers=headers, timeout=30, allow_redirects=False)     
+        return self.session.get(self.url + uri, params=payload, headers=headers, timeout=30, allow_redirects=True, proxies=proxy)     
 
 
     def post_request_response(self, uri, data, headers=None):  
         if headers == None: 
-            headers = {"Content-Type": "application/json"}
+            headers = {'Content-Type': 'application/json; charset=utf-8',
+                       'Connection': 'keep-alive'}
         self.lg('POST %s' % self.url + uri)
-        return self.session.post(self.url + uri, data=json.dumps(data), headers=headers, timeout=30, allow_redirects=False)    
+        return self.session.post(self.url + uri, data=json.dumps(data), headers=headers, timeout=30, allow_redirects=False, proxies=proxy)    
 
 
     def put_request_response(self, uri, data, headers=None):  
         if headers == None: 
-            headers = {"Content-Type": "application/json"}
+            headers = {'Content-Type': 'application/json; charset=utf-8',
+                       'Connection': 'keep-alive'}
         self.lg('PUT %s' % self.url + uri)
-        return self.session.put(self.url + uri, data=json.dumps(data), headers=headers, timeout=30, allow_redirects=False)        
+        return self.session.put(self.url + uri, data=json.dumps(data), headers=headers, timeout=30, allow_redirects=False, proxies=proxy)        
 
 
     def delete_request_response(self, uri, headers=None):      
         if headers == None: 
-            headers = {"Content-Type": "application/json"}
+            headers = {'Content-Type': 'application/json; charset=utf-8',
+                       'Connection': 'keep-alive'}
         self.lg('DELETE %s' % self.url + uri)
-        return self.session.delete(self.url + uri, headers=headers, timeout=30, allow_redirects=False)
+        return self.session.delete(self.url + uri, headers=headers, timeout=30, allow_redirects=False, proxies=proxy)

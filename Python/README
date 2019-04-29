@@ -61,7 +61,7 @@ To run specific test case:
 ---------------------------
 Windows
 ```
-C:\Users\a.ali\Repos\api_testing>c:\Python27\Scripts\nosetests.exe -v testsuite.test_posts:TestPosts.test001_create --tc-file config.ini
+C:\Users\a.ali\Repos\api_testing>c:\Python27\Scripts\nosetests.exe -v testsuite.test_posts:TestPosts.test001_create --tc-file config.ini --with-xunitmp
 TestCase-1: Test case for test create post using POST /posts/.* ... ok
 
 ----------------------------------------------------------------------
