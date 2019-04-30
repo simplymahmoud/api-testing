@@ -7,7 +7,7 @@
 * config.cfg: The test-suite configuration file.
 * requirements: The test-suite python packages requirements file.
 * testsuite: The test-suite folder holding test cases files and test-framework.
-* testsuite/test_posts.py: The test case file for the task.
+* testsuite/test_get.py: The test case file for the task.
 * testframework: The test-framework folder for base test case class and utilities.
 * testframework/base.py: The test framework base file for test case classes and utilities.
 * logs: The test-suite logging folder will be created during operations containing the log file.
@@ -40,35 +40,7 @@ C:\Users\a.ali\Repos\api_testing>c:\Python27\Scripts\nosetests.exe -v testsuite 
 
 Linux
 ```
-python$> nosetests -v testsuite --tc-file=config.ini
-```
-
-See test results:
------------------
-```
-C:\Users\a.ali\Repos\api_testing>c:\Python27\Scripts\nosetests.exe -v testsuite --tc-file config.ini
-TestCase-1: Test case for test create post using POST /posts/.* ... ok
-TestCase-2: Test case for test view post using GET /posts/{id}.* ... ok
-TestCase-3: Test case for test list posts using GET /posts.* ... ok
-TestCase-4: Test case for test update post using PUT /posts/{id}.* ... ok
-TestCase-5: Test case for test delete post using DELETE /posts/{id}.* ... ok
-
-----------------------------------------------------------------------
-Ran 5 tests in 3.248s
-
-OK
-```
-To run specific test case:
----------------------------
-Windows
-```
-C:\Users\a.ali\Repos\api_testing>c:\Python27\Scripts\nosetests.exe -v testsuite.test_posts:TestPosts.test001_create --tc-file config.ini --with-xunitmp
-TestCase-1: Test case for test create post using POST /posts/.* ... ok
-
-----------------------------------------------------------------------
-Ran 1 test in 0.819s
-
-OK
+python$> nosetests -v testsuite --tc-file=config.ini --with-xunitmp
 ```
 
 See test logs open file logs/api_testsuite.log
