@@ -28,6 +28,7 @@ Linux
 ```
 python$> sudo apt-get install python-pip
 python$> pip install -r requirements
+sudo pip install --index-url=https://pypi.python.org/simple/ nose_xunitmp
 ```
 
 Run the tests:
