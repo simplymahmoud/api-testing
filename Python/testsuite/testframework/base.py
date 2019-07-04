@@ -8,6 +8,10 @@ from unittest import TestCase
 import requests
 import json
 
+
+default_headers = {'Content-Type': 'application/json; charset=utf-8', 'Connection': 'keep-alive'}
+
+
 class BaseTest(TestCase):
 
 
@@ -50,28 +54,24 @@ class BaseTest(TestCase):
         
         
     def get_request_response(self, uri, headers=None, payload=None):
-        if headers == None: 
-            headers = {"Content-Type": "application/json"}
+        if not headers: headers = default_headers
         self.lg('GET %s' % self.url + uri)
         return self.session.get(self.url + uri, params=payload, headers=headers, timeout=30, allow_redirects=False)     
 
 
     def post_request_response(self, uri, data, headers=None):  
-        if headers == None: 
-            headers = {"Content-Type": "application/json"}
+        if not headers: headers = default_headers
         self.lg('POST %s' % self.url + uri)
         return self.session.post(self.url + uri, data=json.dumps(data), headers=headers, timeout=30, allow_redirects=False)    
 
 
     def put_request_response(self, uri, data, headers=None):  
-        if headers == None: 
-            headers = {"Content-Type": "application/json"}
+        if not headers: headers = default_headers
         self.lg('PUT %s' % self.url + uri)
         return self.session.put(self.url + uri, data=json.dumps(data), headers=headers, timeout=30, allow_redirects=False)        
 
 
     def delete_request_response(self, uri, headers=None):      
-        if headers == None: 
-            headers = {"Content-Type": "application/json"}
+        if not headers: headers = default_headers
         self.lg('DELETE %s' % self.url + uri)
         return self.session.delete(self.url + uri, headers=headers, timeout=30, allow_redirects=False)
