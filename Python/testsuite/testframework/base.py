@@ -28,7 +28,10 @@ class BaseTest(TestCase):
     def __init__(self, *args, **kwargs):
         super(BaseTest, self).__init__(*args, **kwargs)
         self.url = config['main']['url']
-
+        '''self.url_string_list = []
+        for key in config['get'].keys():
+            for inner_key in config[key].keys():
+                self.url_string_list.append(str(key) + '?' + inner_key + '=' + config[key][inner_key])'''
 
     def setUp(self):
         self._testID = self._testMethodName
